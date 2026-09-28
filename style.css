@@ -78,7 +78,7 @@ button:active {
 
 .controls-note{
     color: green;
-    font-size: 1.5px;
+    font-size: 3px;
     margin: 6px 6px 0;
     display: flex;
     justify-content: center;
@@ -91,3 +91,4 @@ button:active {
     .score span {font-size: 1.5rem;}
     button {font-size: 1rem; padding: 6px 8px;}
 }
+
