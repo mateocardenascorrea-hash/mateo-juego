@@ -204,24 +204,24 @@ function draw() {
     }
 
     // Jugador
-    ctx.shadowColor = '#7bb3ff';
+    ctx.shadowColor = '#332d8d';
     ctx.shadowBlur = 18;
     ctx.fillStyle = '#b1dcff';
     ctx.beginPath();
     ctx.roundRect(player.x, player.y, player.w, player.h, 6);
     ctx.fill();
-    ctx.fillStyle = '#76b8ff';
+    ctx.fillStyle = '#1900ff';
     ctx.beginPath();
     ctx.roundRect(player.x+8, player.y-6, 14, 8, 4);
     ctx.fill();
-    ctx.fillStyle = '#5f9eff';
+    ctx.fillStyle = '#612dc0';
     ctx.fillRect(player.x-4, player.y+4, 4, 8);
     ctx.fillRect(player.x+player.w, player.y+4, 4, 8);
     ctx.shadowBlur = 0;
 
     // Balas
-    ctx.fillStyle = '#f2ff80';
-    ctx.shadowColor = '#f0ff60';
+    ctx.fillStyle = '#ff0000';
+    ctx.shadowColor = '#ff0000';
     ctx.shadowBlur = 16;
     for (const b of bullets) {
         ctx.fillRect(b.x, b.y, b.w, b.h);
@@ -232,12 +232,12 @@ function draw() {
     for (const e of enemies) {
         if (!e.alive) continue;
         ctx.fillStyle = e.color;
-        ctx.shadowColor = '#b0d0ff';
+        ctx.shadowColor = '#368aeb';
         ctx.shadowBlur = 12;
         ctx.beginPath();
         ctx.roundRect(e.x, e.y, e.w, e.h, 6);
         ctx.fill();
-        ctx.fillStyle = '#fcf9ea';
+        ctx.fillStyle = '#0e8ed8';
         ctx.shadowBlur = 4;
         ctx.fillRect(e.x+4, e.y+3, 6, 6);
         ctx.fillRect(e.x+e.w-10, e.y+3, 6, 6);
@@ -253,7 +253,7 @@ function draw() {
     ctx.textBaseline = 'middle';
     if (gameOver) {
         ctx.fillStyle = '#ffb0a0';
-        ctx.shadowColor = '#ff4f4f';
+        ctx.shadowColor = '#ff0000';
         ctx.shadowBlur = 24;
         ctx.fillText('💀 GAME OVER', CW/2, CH/2 - 20);
         ctx.shadowBlur = 0;
